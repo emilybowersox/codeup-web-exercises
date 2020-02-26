@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>American Airlines</title>
+</head>
+<body>
+    <div>
+        <!--check forms- get vs. post, make sure that's working-->
+        <form method="POST" action="https://request-inspector.glitch.me/>
+    <span>Log in <a href="">Join AAdvantage >></a></span><br>
+        <br>
+        <label for="username">AAdvantage # or username<br><input type="text" id=username name="username"></label><br>
+        <a href="">Need AAdvantage number? >></a><br>
+        <br>
+        <!--add last name and password text boxes here-->
+
+        <a href="">Need password? >></a><br>
+        <br>
+        <span>
+            <input name="remember_me" value="true" type="checkbox">Remember Me
+            <button type="submit">Log in</button>
+        </span>
+        </form>
+    </div>
+
+<div>
+    <h2>Book a flight with American Airlines</h2>
+    <span>
+        <!--These first two shouldn't actually be anchors--->
+        <a href="">Flight</a>
+        <a href="">Vaction Packages</a>
+        <a href="">Hotel</a>
+        <a href="">Car</a>
+    </span>
+    <form method="GET" action="https://request-inspector.glitch.me" target="_blank">
+        Round Trip<input type="radio" name="type of flight" value="round trip">
+        One Way<input type="radio" name="type of flight" value="one way">
+        <span><input name="redeem_miles" value="true" type="checkbox">Redeem Miles</span><br>
+        <br>
+        <span>From <input type="text" name="place_of_departure" placeholder="City or airport"></span>
+        <span>To <input type="text" name="place_of_arrival" placeholder="City or airport"></span>
+
+        <label for="number_of_passengers">Number of Passengers <select id="number_of_passengers"
+                                                                       name="number_of_passengers">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+        </select></label><br>
+        <br>
+        <span>Depart <input type="date" placeholder="mm/dd/yyyy"></span>
+        <span>Return <input type="date" placeholder="mm/dd/yyyy"></span>
+        <button type="submit">Search</button>
+    </form>
+</div>
+</body>
+</html>
