@@ -1,4 +1,36 @@
-.fancy-header {
+
+
+header {
+    text-align: center;
+    color: coral;
     text-decoration: underline;
-    color: cadetblue;
+}
+
+body {
+    background-image: url("https://thumbs.dreamstime.com/b/closeup-to-white-crumpled-paper-texture-background-abstract-copy-space-156435813.jpg");
+}
+
+header {
+    background-color: lightslategray;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: Courier, serif;
+}
+
+table {
+    font-size: 1.5em;
+    padding: 1.5em;
+}
+
+th {
+    font-size: 2em;
+}
+
+a:hover {
+    color: lightslategray;
 }
