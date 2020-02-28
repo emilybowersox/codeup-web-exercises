@@ -2,35 +2,42 @@
 
 header {
     text-align: center;
-    color: coral;
+    color: darkgray;
     text-decoration: underline;
+    background-color: lightslategray
+}
+
+h2 {
+    text-decoration: underline;
+    color: lightslategray;
 }
 
 body {
     background-image: url("https://thumbs.dreamstime.com/b/closeup-to-white-crumpled-paper-texture-background-abstract-copy-space-156435813.jpg");
-}
-
-header {
-    background-color: lightslategray;
+    background-size: auto;
+    font-family: Courier;
+    color: lightslategray;
 }
 
 ul {
     list-style: none;
 }
 
-body {
-    font-family: Courier, serif;
-}
-
 table {
     font-size: 1.5em;
     padding: 1.5em;
+    color: lightslategray;
 }
 
 th {
     font-size: 2em;
 }
 
+footer {
+    text-transform: uppercase;
+}
+
 a:hover {
     color: lightslategray;
 }
+
