@@ -7,23 +7,27 @@ body, html {
 }
 
 :root {
-    --bg-info:
-
+    --bg-info: brown
 }
 
-:root {
-    --text-info
+/* var(--bg-info) to use
+    you'll only create a variable if you're going to keep using it- for example you use the same green over
+    and over in codeup's branding/website*/
 
+
+*{
+    border: 1px solid red;
 }
+/*that's ^ just a way to test stuff, but now it's overridden by the borders below*/
 
-:root {
-    --bg-success
 
-}
+
 
 .message {
-    margin: .3em;
-    border: solid lightslategray .6px;
+    width: 90%;
+    margin: 10px auto;
+    padding: 10px;
+    border: 1px solid lightslategray;
     border-radius: 5px;
 }
 

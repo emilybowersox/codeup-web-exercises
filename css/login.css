@@ -1,5 +1,5 @@
 /* the * means all- so it's applied to everything. you can try putting something
-like border color red to see everything separated*/
+like <border 1 px solid red> to see everything separated*/
 
 * {
     padding: 0;
