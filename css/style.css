@@ -4,7 +4,6 @@ header {
     text-align: center;
     color: darkgray;
     text-decoration: underline;
-    background-color: lightslategray
 }
 
 h2 {
@@ -13,6 +12,7 @@ h2 {
 }
 
 body {
+    margin: 0;
     background-image: url("https://thumbs.dreamstime.com/b/closeup-to-white-crumpled-paper-texture-background-abstract-copy-space-156435813.jpg");
     background-size: auto;
     font-family: Courier;
