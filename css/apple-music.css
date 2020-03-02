@@ -1,0 +1,56 @@
+body, html {
+    background-color: var(--main-bg);
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Ubuntu, sans-serif;
+    border-style: solid; color: #848487;
+    border-width: 0 1px 0 0;
+}
+
+#nav-one {
+    display: inline-block;
+    width: 100%;
+    position: relative;
+    background-color: black;
+    text-decoration: ghostwhite;
+
+}
+
+.nav-first{
+
+}
+
+#nav-two{
+    display: inline-block;
+    width: 100%;
+    text-decoration: black;
+}
+
+.nav-second{
+
+}
+
+.nav{
+
+
+}
+
+.nav-item {
+    display: inline-block;
+    padding: 1em;
+}
+
+.button {
+    background-color: red;
+    color: white;
+    border-radius: 25px;
+}
+
+#big-button{
+
+}
+#small-button{
+
+}
