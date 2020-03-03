@@ -90,7 +90,8 @@ section:nth-of-type(3) {
 }
 section:nth-of-type(3) h3 {
     /*grow is like a balloon! it expands to fill it*/
-    flex-grow: 1;
+    /*flex-grow: 1;*/
+    margin-right: auto;
 }
 .orange-circle {
     background: orange;
