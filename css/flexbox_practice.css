@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    background: orange;
+}
+h1, h2, h3 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+h3 {
+    color: grey;
+}
+hr {
+    border-top: 1px solid whitesmoke;
+    width: 90px;
+}
+.card {
+    margin: .5em;
+    border-radius: 2px;
+    background: white;
+    width: 250px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+img {
+    border-radius: 120px;
+    width: 120px;
+}
+i {
+    color: grey;
+}
+
+.icons{
+    width: 160px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.text-section {
+    position: relative;
+    bottom: 1.5em;
+}
+.icons i {
+    font-size: 2.2em;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 0 10em 0;
+}
+
+header{
+    padding: 1em 0;
+}
+
+main, header{
+    width: 80%;
+    margin: 0 auto;
+    background-color: darkorange;
+
+}
