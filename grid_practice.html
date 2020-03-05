@@ -14,11 +14,19 @@
         * {
             box-sizing: border-box;
         }
+
+        body{
+            text-align: center;
+        }
         main {
+            margin-top: 2em;
             background: lightgreen;
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
+            display: inline-grid;
+            /*inline-grid is a hybrid element- acts like an inline element
+            and you can apply text-align to it- if it was just a grid level
+            element they wouldn't go together*/
+            grid-template-columns: 200px 200px 200px;
+            grid-template-rows: 200px 200px 200px;
         }
         main div {
             font-size: 2em;
@@ -30,7 +38,32 @@
             justify-content: center;
             align-items: center;
         }
+
+
+        .example-item {
+            background: lightgreen;
+            opacity: .7;
+            grid-column: 2 / 4;
+            grid-row-start: 1;
+            grid-row-end: 2;
+        }
+
+            /*These classes are just a way to explicitly place the grey tiles*/
+            /*so that other items may be overlaid.*/
+
+
+        .one {grid-area: 1 / 1 / 2 / 2}
+        .two {grid-area: 1 / 2 / 2 / 3}
+        .three {grid-area: 1 / 3 / 2 / 4}
+        .four {grid-area: 2 / 1 / 3 / 2}
+        .five {grid-area: 2 / 2 / 3 / 3}
+        .six {grid-area: 2 / 3 / 3 / 4}
+        .seven {grid-area: 3 / 1 / 4 / 2}
+        .eight {grid-area: 3 / 2 / 4 / 3}
+        .nine {grid-area: 3 / 3 / 4 / 4}
+
     </style>
+
 </head>
 <body>
 <main>
@@ -43,6 +76,7 @@
     <div>7</div>
     <div>8</div>
     <div>9</div>
+
 </main>
 </body>
 </html>
