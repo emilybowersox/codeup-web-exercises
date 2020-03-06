@@ -48,18 +48,35 @@
     //Exercise 7
     //Sort the favorite foods array in reverse alphabetical order.
     fav_foods.sort().reverse();
-    console.log('reversed after alphabetical order', fav_foods)
+    console.log('reversed after alphabetical order', fav_foods);
     //you can do multiple actons at a time
     //technically this could have just been fav_foods.reverse(); because it was
     //already sorted above, but having both is more explicit
 
     //Exercise 8
     // Create a new array of fruits and add that array to the end of your favorite fruits array.
-    var more_foods = ["pear", "apple", "durian", "grapes", "orange"]
+    var more_foods = ["pear", "apple", "durian", "grapes", "orange"];
     var all_the_foods = fav_foods.concat(more_foods);
     console.log('added two arrays together', all_the_foods);
     //"This method does not change the existing arrays, but returns a new array,
     // containing the values of the joined arrays."
+
+    //Exercise 9
+    //Write a javascript FUNCTION called sayHello that, when sent a name like "Douglas",
+    //returns the string "Hello Douglas!"
+    function sayHello(name) {
+        return "Hello " + name + "!";
+    }
+   console.log(sayHello('Apex'));
+
+    //Exercise 10
+    //Write a FUNCTION called firstItem that takes in an array and returns the first item in the array.
+    function firstItem(array) {
+        return array[0]
+    }
+    console.log(firstItem(fav_foods));
+
+
 
 </script>
 
