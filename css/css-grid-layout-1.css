@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    margin: 5em;
+
+}
+
+
+.wrapper {
+    display: grid;
+    grid-gap: 3px;
+    background: white;
+    height: 300px;
+    width: 485px;
+
+
+    grid-template-columns: 20% 70% 10%;
+    grid-template-rows: 15% 75% 10%;
+
+
+    grid-template-areas:
+        "header       header       header"
+        "nav-section  art-section  aside-section"
+        "nav-section  footer       footer";
+
+}
+
+.wrapper .element{
+    background: burlywood;
+    font-size: x-small;
+    padding: 0.5em;
+}
+
+header{
+grid-area: header;
+}
+
+
+nav{
+grid-area: nav-section;
+}
+
+article{
+grid-area: art-section;
+}
+
+
+aside{
+grid-area: aside-section;
+}
+
+footer{
+grid-area: footer;
+}
