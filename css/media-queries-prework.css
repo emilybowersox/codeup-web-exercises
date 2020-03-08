@@ -4,61 +4,86 @@
 
 /*Mobile First*/
 
-main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 5% 5% 1fr 1fr 10% 10% 10%;
-    height: 600px;
-    width: 250px;
-}
-
-div {
-    text-transform: uppercase;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-family: sans-serif;
-}
-
-div:nth-of-type(1){
-    background: black;
-}
-
-div:nth-of-type(2){
-    background: red;
-}
-
-div:nth-of-type(3){
-    background: dodgerblue;
-}
-
-div:nth-of-type(4){
-    background: midnightblue;
-}
-
-div:nth-of-type(5){
-    background: yellow;
-    color: black;
-}
-
-div:nth-of-type(6){
-    background: seagreen;
-    color: black;
-}
-
-div:nth-of-type(7){
-    background: lightblue;
-    color: black;
-}
-
-
 /* Small devices (phones and pocket devices, 576 and up) */
-/*@media screen and (min-width:576px) { !* ... *! }*/
+@media screen and (min-width:250px) {
 
+    header{
+        color: black;
+        height: 100px;
+        width: 250px;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        font-weight: bolder;
 
+    }
 
+    main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 5% 5% 1fr 1fr 10% 10% 10%;
+        height: 600px;
+        width: 250px;
 
+        grid-template-areas:
+            "sec-header"
+            "sec-menu"
+            "sec-hero"
+            "sec-main"
+            "sec-banner"
+            "sec-extra"
+            "sec-image";
+    }
+
+    div {
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-family: sans-serif;
+    }
+
+    div:nth-of-type(1) {
+        background: black;
+        grid-area: sec-header;
+    }
+
+    div:nth-of-type(2) {
+        background: red;
+        grid-area: sec-menu;
+    }
+
+    div:nth-of-type(3) {
+        background: dodgerblue;
+        grid-area: sec-hero;
+    }
+
+    div:nth-of-type(4) {
+        background: midnightblue;
+        grid-area: sec-main;
+    }
+
+    div:nth-of-type(5) {
+        background: yellow;
+        color: black;
+        grid-area: sec-banner;
+    }
+
+    div:nth-of-type(6) {
+        background: seagreen;
+        color: black;
+        grid-area: sec-extra;
+    }
+
+    div:nth-of-type(7) {
+        background: lightblue;
+        color: black;
+        grid-area: sec-image;
+    }
+}
 
 
 
@@ -66,22 +91,57 @@ div:nth-of-type(7){
 /*TODO!*/
 
 /* Medium devices (tablets, 768px and up) */
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
+
+    header {
+        width: 768px;
+    }
+
+    body {
+        margin: 0;
+    }
 
     main {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: ;
+        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-rows: 5% 2fr 2fr 1fr 1fr;
         height: 600px;
-        width: 250px;
+        width: 768px;
 
-        grid-area: " ";
+        grid-template-areas:
+                "sec-header sec-header sec-header"
+                "sec-hero   sec-hero   sec-hero"
+                "sec-menu   sec-main   sec-main"
+                "sec-menu   sec-banner sec-banner"
+                "sec-menu   sec-extra  sec-image";
     }
 }
 
 /* Large devices (desktops, 992px and up) */
-@media screen and (min-width:992px) {
+@media screen and (min-width: 992px) {
 
+    header {
+        width: 992px;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    main{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 5% 1fr 10% 10% 10%;
+        height: 600px;
+        width: 992px;
+
+        grid-template-areas:
+            "sec-header sec-menu    sec-menu    sec-menu"
+            "sec-hero   sec-hero    sec-hero    sec-hero"
+            "sec-main   sec-main    .           sec-image"
+            "sec-main   sec-main    .           sec-extra"
+            "sec-banner sec-banner sec-banner   sec-banner";
+    }
 
 }
 
