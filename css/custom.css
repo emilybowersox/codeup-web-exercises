@@ -1,0 +1,51 @@
+
+.container {
+    width: 100%;
+    padding: 0;
+
+}
+
+.img-container {
+    margin: 0;
+    padding: 0;
+
+}
+
+.jumbotron {
+
+    padding: 0;
+    background-size: auto;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute;
+    width: 100%;
+    background: white;
+    color: black;
+    opacity: 0.65;
+}
+
+.img-container {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.option{
+    width: 100%;
+    border-top: lightgray solid 1px;
+    padding: 8px 0 8px 0;
+}
+
+
