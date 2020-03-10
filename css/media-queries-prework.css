@@ -5,12 +5,13 @@
 /*Mobile First*/
 
 /* Small devices (phones and pocket devices, 576 and up) */
-@media screen and (min-width:250px) {
+/*@media screen and (min-width:250px) {*/
+/*most people don't list this first one- and just start with medium*/
 
     header{
         color: black;
-        height: 100px;
-        width: 250px;
+        height: auto;
+        width: 100%;
         text-transform: uppercase;
         display: flex;
         align-items: center;
@@ -25,7 +26,7 @@
         grid-template-columns: 1fr;
         grid-template-rows: 5% 5% 1fr 1fr 10% 10% 10%;
         height: 600px;
-        width: 250px;
+        width: 100%;
 
         grid-template-areas:
             "sec-header"
@@ -88,13 +89,16 @@
 
 
 
-/*TODO!*/
+
 
 /* Medium devices (tablets, 768px and up) */
+/*so for this size, this is now over-riding what happened above*/
+
+/*i broke this middle one????*/
 @media screen and (min-width: 768px) {
 
     header {
-        width: 768px;
+        width: 100%;
     }
 
     body {
@@ -121,7 +125,9 @@
 @media screen and (min-width: 992px) {
 
     header {
-        width: 992px;
+        width: 100%;
+        height: auto;
+        padding: 2em 0;
     }
 
     body {

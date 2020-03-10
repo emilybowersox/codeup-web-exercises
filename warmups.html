@@ -87,6 +87,31 @@
     console.log('checkType(true) =', checkType(true));
 
     //Exercise 12
+    //Create a function that takes in an array of values and console.logs the data type of each.
+    //arrays stores multiple values in a single variable
+    //with arrays with start with 0s (and that's why the < sign works when calculating length
+    // -because x will start will zero so it's final number will always
+    // be less than the length)
+    // ..., so you could write it like
+        // function checkTypes(anArray){
+                //anArray[0]
+                //anArray[1]
+                //anArray[2]
+        //}
+    //and that would check the first 3 values in the variable
+
+    function checkTypes(anArray){
+
+        for(var x = 0; x < anArray.length; x++) {
+            //console.log(anArray.length);
+            //console.log('x: '+x);
+            console.log( checkType(anArray[x]));
+        }
+    }
+        //start with x = 0 (the first one), until x is the length of the array- keep increasing by 1
+
+
+    checkTypes([2, "Fer", false]);
 
 </script>
 
