@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!--    my style sheet goes on the bottom to override-->
     <link rel="stylesheet" href="css/custom.css">
+    <script src="https://kit.fontawesome.com/7a56198c1e.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <!-- Main page content -->
@@ -34,13 +35,14 @@
     <a class="navbar-brand" href="#">
 <!--        add person icon to image space below-->
         <img src="/docs/4.2/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
-        Sign up
+        <i class="fas fa-user"></i> Sign up
     </a>
 </nav>
 
 <main class="container">
 
-    <div class="jumbotron jumbotron-fluid .d-sm-none">
+    <div class="jumbotron jumbotron-fluid d-none d-md-block">
+<!--       (d-none) hide on everything- (d-md-block) but display on everything medium and up (display in block medium +)-->
         <div class="img-container">
             <img src="imgs/pizza.png" alt="pizza background image">
             <h1 class="centered display-4">Welcome to Pizza World!</h1>
@@ -61,6 +63,7 @@
     </ul>
 
 <div class="card-1">
+    <form action="">
     <div class="card-outer mb-3" style="max-width: 100%;">
         <div class="card-header bg-primary text-white">Choose size and crust</div>
         <div class="card-body">
@@ -74,6 +77,10 @@
                     <div class="option">
                     <input type="radio" aria-label="Radio button for following text input"> Medium (12")
                     </div>
+            <!--the way to put the lines around the the radio button lines is to make it a List Group
+                and then remove the padding around it in the card-body level (use class p-0 shortcut)
+                -you can add back in some padding around the paragraph class
+                -->
                 </div>
             </div>
             <br>
@@ -92,8 +99,9 @@
         </div>
     </div>
     <div class="card-footer text-right">
-        <small class="text-muted"><a href="#" class="btn btn-primary">Next Step</a></small>
+        <small class="text-muted"><a href="#" class="btn btn-primary">Next Step <i class="fas fa-arrow-circle-right"></i></a></small>
     </div>
+    </form>
 </div>
     <br>
 
@@ -146,7 +154,10 @@
             </div>
         </div>
         <div class="card-footer text-right">
-            <small class="text-muted"><a href="#" class="btn btn-primary">Next Step</a></small>
+            <div class="button-group" role="group" aria-label="buttons">
+            <small class="text-muted"><a href="#" class="btn btn-primary"><i class="fas fa-arrow-circle-left"></i> Previous Step</a></small>
+            <small class="text-muted"><a href="#" class="btn btn-primary">Next Step <i class="fas fa-arrow-circle-right"></i></a></small>
+            </div>
         </div>
     </div>
     <br>
@@ -204,7 +215,7 @@
             </div>
         </div>
         <div class="card-footer text-right">
-            <small class="text-muted"><a href="#" class="btn btn-primary">Checkout</a></small>
+            <small class="text-muted"><a href="#" class="btn btn-primary"><i class="fas fa-shopping-cart"></i> Checkout</a></small>
         </div>
     </div>
 
