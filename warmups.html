@@ -110,8 +110,42 @@
     }
         //start with x = 0 (the first one), until x is the length of the array- keep increasing by 1
 
-
     checkTypes([2, "Fer", false]);
+
+    //Exercise 13
+    //Write a function called isString that accepts a single input, and returns true if the data type
+    //is a string, or false if it is not a string
+
+
+    function isString(aValue){
+        return (checkType(aValue)) === "string";
+    }
+
+
+
+    console.log('isString(true) ' + isString(true)); //returns false
+    console.log(isString("hello")); // returns true
+
+
+    //Exercise 14
+    //Write a function called isNumber that accepts a single input, and returns true if the data stype
+    //is a number or false if it is not a number
+
+        function isNumber(aNumber) {
+            return typeof aNumber === "number";
+        }
+
+
+
+
+    console.log(isNumber("Hi")); //returns false
+    console.log(isNumber(42)); //returns true
+
+
+
+
+
+
 
 </script>
 
