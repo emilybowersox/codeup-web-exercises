@@ -135,15 +135,27 @@
             return typeof aNumber === "number";
         }
 
-
-
-
     console.log(isNumber("Hi")); //returns false
     console.log(isNumber(42)); //returns true
 
 
+    //Exercise 15
+    //Create a function that generates and returns a random number between 0 and 10.
 
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * (max - min) + min);
+    }
+        //in  this case you could just do * 10 because (10-0) + 0 = 10
+        //math.floor will allow us to catch the 0s
 
+    console.log('Random number is ' + getRandom(0, 10));
+    //Explanation of Math.random, Math.floor etc. here:
+    //Math.floor makes it an integer- if it can be any number w/decimal, you can leave off math.floor
+    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+    //function getRandomInt(min, max) {
+        //min = Math.ceil(min);
+        // max = Math.floor(max);
+        //return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive}
 
 
 
