@@ -32,9 +32,6 @@
 // alert("Your number + 100 is " + plus100 + ".");
 
 
-
-
-
 /* ########################################################################## */
 
 // /**
@@ -55,25 +52,22 @@
 //  */
 
 
-
 function analyzeColor(colors) {
-   if (colors === 'blue') {
-       return "Blue is the color of the sky."
-   } else if (colors === 'red') {
+    if (colors === 'blue') {
+        return "Blue is the color of the sky."
+    } else if (colors === 'red') {
         return "Strawberries are red."
-   } else if (colors === 'cyan') {
-       return "I don't know anything about cyan."
-   } else {
-       return "I do not have that color in my list."
-   }
+    } else if (colors === 'cyan') {
+        return "I don't know anything about cyan."
+    } else {
+        return "I do not have that color in my list."
+    }
 }
 
 console.log(analyzeColor('blue'));
 console.log(analyzeColor('red'));
 console.log(analyzeColor('cyan'));
 console.log(analyzeColor('purple'));
-
-
 
 
 // Don't change the next two lines!
@@ -97,7 +91,7 @@ console.log(analyzeColor(randomColor));
  * Refactor your above function to use a switch-case statement
  */
 
-switch(randomColor) {
+switch (randomColor) {
     case "red":
         console.log("Fire trucks are red.");
         break;
@@ -130,34 +124,67 @@ switch(randomColor) {
 //  * function to show it to the user.
 //  */
 
-
-var userColor = prompt("Give me a color, please.");
-alert(analyzeColor(userColor));
-
-
+//
+// var userColor = prompt("Give me a color, please.");
+// // alert(analyzeColor(userColor));
 
 
 /* ########################################################################## */
 
-/**
- * TODO:
- * Suppose there's a promotion in Walmart, each customer is given a randomly
- * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
- * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
- * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
- * all for free!.
- *
- * Write a function named `calculateTotal` that accepts a lucky number and total
- * amount, and returns the discounted price.
- *
- * Example:
- * calculateTotal(0, 100) // returns 100
- * calculateTotal(4, 100) // returns 50
- * calculateTotal(5, 100) // returns 0
- *
- * Test your function by passing it various values and checking for the expected
- * return value.
- */
+// /**
+//  * Suppose there's a promotion in Walmart, each customer is given a randomly
+//  * generated "lucky number" between 0 and 5. If your lucky number is 0 you have
+//  * no discount, if your lucky number is 1 you'll get a 10% discount, if it's 2,
+//  * the discount is 25%, if it's 3, 35%, if it's 4, 50%, and if it's 5 you'll get
+//  * all for free!.
+//  *
+//  * Write a function named `calculateTotal` that accepts a lucky number and total
+//  * amount, and returns the discounted price.
+//  *
+//  * Example:
+//  * calculateTotal(0, 100) // returns 100
+//  * calculateTotal(4, 100) // returns 50
+//  * calculateTotal(5, 100) // returns 0
+//  *
+//  * Test your function by passing it various values and checking for the expected
+//  * return value.
+//  */
+
+var discountAmount;
+
+function calculateTotal(luckyNumber, totalAmount) {
+    switch (luckyNumber) {
+        case 0 :
+            discountAmount = 0;
+            break;
+        case 1 :
+            discountAmount = 0.1;
+            break;
+        case 2 :
+            discountAmount = 0.25;
+            break;
+        case 3 :
+            discountAmount = 0.35;
+            break;
+        case 4 :
+            discountAmount = 0.5;
+            break;
+        case 5 :
+            discountAmount = 1;
+            break;
+    }
+
+    return totalAmount - (discountAmount * totalAmount);
+}
+
+console.log(calculateTotal(1, 100));
+console.log(calculateTotal(3, 90));
+console.log(calculateTotal(5, 1000));
+
+
+
+
+
 
 /**
  * TODO:
@@ -167,4 +194,9 @@ alert(analyzeColor(userColor));
  * price before the discount was, and what their price after the discount is.
  */
 // Generate a random number between 0 and 6
-// var luckyNumber = Math.floor(Math.random() * 6);
+
+var luckyNumber = Math.floor(Math.random() * 6);
+
+var userBill = prompt("What was your total bill?");
+
+
