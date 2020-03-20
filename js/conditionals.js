@@ -43,8 +43,48 @@ if (enterNumber) {
         var negativeOrPositive = (parsedNumber >= 0) ? "positive" : "negative";
         alert("The number is " + negativeOrPositive + ".")
     }
-
 }
+
+
+
+
+
+//here's the way to do it with functions (so the functions would be reusable)
+/*function promptForNumber () {
+    var userNumber = prompt("Please enter your number here:");
+    return parseInt(userNumber);
+}
+
+function evenOrOdd(aNumber) {
+    if(aNumber % 2 === 0) {
+        return "even";
+    } else {
+        return "odd";
+    }
+}
+
+function plus100(aNumber) {
+    return aNumber + 100;
+}
+
+function negativeOrPositive(aNumber) {
+    return (parsedNumber >= 0) ? "positive" : "negative";
+}
+
+
+if(isNaN(parsedNumber)) {
+    alert("That was not a number");
+} else {
+
+    alert("The number is " + evenOrOdd(parsedNumber));
+
+    alert("Your number + 100 is equal to " + plus100(parsedNumber));
+
+    alert("The number is " + negativeOrPositive(parsedNumber));
+}
+
+ */
+
 
 
 // if (userNumber % 2 === 0) {
@@ -110,7 +150,7 @@ var randomColor = colors[Math.floor(Math.random() * colors.length)];
 //  */
 
 
-console.log(analyzeColor(randomColor));
+console.log("Will be a different color every time:" + analyzeColor(randomColor));
 
 
 /**
@@ -225,5 +265,9 @@ console.log(calculateTotal(5, 1000));
 var luckyNumber = Math.floor(Math.random() * 6);
 
 var userBill = prompt("What was your total bill?");
+
+alert("Your lucky number is " + luckyNumber + ", which means your final bill will be $"
+    + calculateTotal(luckyNumber, userBill));
+
 
 
