@@ -18,18 +18,45 @@
  */
 
 
-// confirm ("Would you like to enter a number?");
-// var userNumber = prompt("Please enter a number here:");
-//
+var enterNumber = confirm ("Would you like to enter a number?");
+//that is a boolean statement ^ - ok would equal true, cancel would equal false
+
+if (enterNumber) {
+    var userNumber = prompt("Please enter a number here:");
+    var parsedNumber = parseInt(userNumber);
+
+    //console.log(parsedNumber isNaN(parsedNumber));
+
+    if(isNaN(parsedNumber)) {
+        alert("That was not a number");
+    } else {
+        // store the text "even" or "odd"
+        var evenOrOdd = (parsedNumber % 2 === 0) ? "even" : "odd";
+        //have to create a new variable that will state that
+        //if it's true assign "even," if it's false alert "odd"
+        //create a new variabe to store the information ^
+        alert("The number is " + evenOrOdd + ".");
+
+        var plus100 = parsedNumber + 100;
+        alert("Your number + 100 is equal to " + plus100 + ".");
+
+        var negativeOrPositive = (parsedNumber >= 0) ? "positive" : "negative";
+        alert("The number is " + negativeOrPositive + ".")
+    }
+
+}
+
+
 // if (userNumber % 2 === 0) {
 //     alert("Your number is even.");
-// } else {
-//     alert("Your number is odd.");
-// }
+//  } else {
+//      alert("Your number is odd.");
+//  }
 //
 // var plus100 = userNumber
 //
 // alert("Your number + 100 is " + plus100 + ".");
+
 
 
 /* ########################################################################## */
