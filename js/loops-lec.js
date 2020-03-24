@@ -136,11 +136,11 @@ do {
 //TODO: Create a do-while loop that prompts the user for a color and continues to prompt until the string passed is "blue"
 
 
-do {
-    var userPrompt = prompt('Please enter a color. ')
-        .toLowerCase();
-    console.log('userPrompt: ' + userPrompt);
-} while (userPrompt !== 'blue');
+// do {
+//     var userPrompt = prompt('Please enter a color. ')
+//         .toLowerCase();
+//     console.log('userPrompt: ' + userPrompt);
+// } while (userPrompt !== 'blue');
 
 
 
@@ -241,21 +241,25 @@ for(var i = 0; i <= 100; i++) {
 
 
 for(var i = 0; i <= 100; i++) {
-    if(i % 3 ===0) {
+    if((i % 3 === 0) && (i % 5 !== 0)) {
         console.log('Fizz (numbers divisible by 3): ' + i);
     }
-    if(i % 5 === 0) {
+    if((i % 5 === 0) && (i % 3 !== 0)) {
         console.log('Buzz (numbers divisible by 5): ' + i);
     }
     if((i % 3 === 0) && (i % 5 === 0 )) {
         console.log('Fizzbuzz (numbers divisible by 3 AND 5): ' + i);
     }
-    else {
+    if((i % 3 !== 0) && (i % 5 !== 0)) {
         console.log(i);
     }
 }
 
 
+//actually simpler to use if/else if/else... but order matters- needs to be % 3 && % 5 FIRST,
+//then else if % 3, else if % 5, else (i)-- the "else's" make the run in order, wheras
+//when i was just doing "ifs" it kept evaulating them starting over each time and thus
+//including every number every time
 
 
 
@@ -264,8 +268,38 @@ for(var i = 0; i <= 100; i++) {
  *********************************************/
 // We can get a loop to stop using break;
 
+var numbertoStopAt = 5;
 
+for (var i =1; i < 100; i++) {
+    console.log('Loop counter is: ' + i);
+
+    if (i === numbertoStopAt) {
+        console.log('We have reached the stopping point: break!');
+        // use the break keyword to exit from the While loop
+        break;
+        // nothing after the break will get processed
+        console.log('You will never see this line.');
+    }
+}
 
 
 // We can get an iteration to skip using continue;
+'use strict';
+
+for (var i = 1; i < 100; i++) {
+
+    if (i % 2 !== 0) {
+        //number isn't even
+        //odd numbers aren't as cool
+        //will skip over the numbers that aren't that^
+        //skip the rest of the loop and continue with the next iteration
+        continue;
+    }
+    console.log('Here is a lovely even number: ' + i);
+}
+
+
+
+
+
 
