@@ -12,6 +12,8 @@ while (i <= 65536) {
 
 //ice cream cones problem
 //Not done!!!!
+//conditionals inside of loops
+
 var allCones = Math.floor(Math.random() * 50) + 50;
 var conesSold = Math.floor(Math.random() * 5) + 1;
 var conesLeft = allCones - conesSold;
