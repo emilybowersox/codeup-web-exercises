@@ -11,21 +11,36 @@ while (i <= 65536) {
 
 
 //ice cream cones problem
-//Not done!!!!
 //conditionals inside of loops
+//It works!
 
 var allCones = Math.floor(Math.random() * 50) + 50;
-var conesSold = Math.floor(Math.random() * 5) + 1;
-var conesLeft = allCones - conesSold;
 
 do {
-    if (conesLeft > conesSold) {
-        console.log(conesSold + ' cones sold.');
+    var conesToPurchase = Math.floor(Math.random() * 5) + 1;
+
+    if (conesToPurchase <= allCones) {
+        console.log(conesToPurchase + ' cones sold.');
+        // conesToPurchase = conesToPurchase - allCones;
+        allCones -= conesToPurchase;
+    } else {
+        console.log('I cannot sell you ' + conesToPurchase + ', I only have '
+        + allCones + ' left.')
     }
-    else if ((conesSold > conesLeft) && (conesLeft > 0)) {
-        console.log('I cannot sell you ' + conesSold + 'I only have ' + conesLeft + ' cones left.');
-    }
-    else {
-        console.log('Yay I sold all the cones.');
-    }
-    // while (conesLeft > 0);
+    console.log(allCones);
+} while (allCones > 0);
+    console.log('Sold them all!')
+
+
+// previous try
+// do {
+//     if (conesLeft > conesSold) {
+//         console.log(conesSold + ' cones sold.');
+//     }
+//     else if ((conesSold > conesLeft) && (conesLeft > 0)) {
+//         console.log('I cannot sell you ' + conesSold + 'I only have ' + conesLeft + ' cones left.');
+//     }
+//     else {
+//         console.log('Yay I sold all the cones.');
+//     }
+//     // while (conesLeft > 0);
