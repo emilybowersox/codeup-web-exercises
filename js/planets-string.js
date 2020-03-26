@@ -28,6 +28,15 @@
      * string, and <li> tags around each planet.
      */
 
+    var brPlanets = "Mercury<br>Venus<br>Earth<br>Mars<br>Jupiter<br>Saturn<br>Uranus<br>Neptune";
+    console.log(brPlanets);
+    //??
+
+
+    var planetStringList = "<ul><li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li></ul>";
+    console.log(planetStringList);
+
+
 
 
 
