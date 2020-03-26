@@ -2,7 +2,7 @@
     "use strict";
 
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
-    var planetsArray;
+    var planetsArray = [];
 
     /**
      * TODO:
@@ -12,10 +12,11 @@
      */
 
     console.log(planetsString);
+
     planetsArray = planetsString.split('|');
     console.log(planetsArray);
 
-    console.log(planetsString);
+    //console.log(planetsString);
 
     /**
      * TODO:
@@ -28,14 +29,24 @@
      * string, and <li> tags around each planet.
      */
 
-    var brPlanets = "Mercury<br>Venus<br>Earth<br>Mars<br>Jupiter<br>Saturn<br>Uranus<br>Neptune";
-    console.log(brPlanets);
-    //??
+    var brPlanets = planetsArray.join("<br>");
+    // console.log(brPlanets);
+    document.write(brPlanets);
 
 
-    var planetStringList = "<ul><li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li></ul>";
-    console.log(planetStringList);
+    //see  codeup git hub for answer
+    // you have to concatenate 3 parts! beginning, middle part
+    //  planetsUL += planetsArray.join("</li><li>");
+    //  += adds the new thing while preserving the old thing too
 
+
+
+
+
+    // var planetStringList = planetsArray.join("<ul><li>")
+    // var planetStringList = "<ul><li>Mercury</li><li>Venus</li><li>Earth</li><li>Mars</li><li>Jupiter</li><li>Saturn</li><li>Uranus</li><li>Neptune</li></ul>";
+    // console.log(planetStringList);
+    //
 
 
 
