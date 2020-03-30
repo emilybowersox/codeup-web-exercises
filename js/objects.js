@@ -160,7 +160,9 @@
      *      ...
      */
 
-
+    for (var books = 0; books < 5; books++) {
+        console.log("Book # " + books.index + " Title: " + books.title + " Author: " + books.author.firstName + " " + books.author.lastName);
+    }
 
 
     /**
