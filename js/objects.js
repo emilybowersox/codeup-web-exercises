@@ -16,6 +16,11 @@
         firstname: "Emily",
         lastname: "Bowersox"
     };
+
+    //another way to add- you can intialize the object with nothing in it (empty braces)
+    // person.firstname = "Emily";
+    // person.lastname = "Bowersox";
+
     console.log(typeof person);
     console.log(person);
 
@@ -30,6 +35,11 @@
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 
+    person.sayHello = function () {
+        return "Hello from " + person.firstname + " " + person.lastname + "!";
+    };
+
+    console.log(person.sayHello());
 
 
 
@@ -48,11 +58,26 @@
      * and console.log the relevant messages for each person
      */
 
-    // var shoppers = [
-    //     {name: 'Cameron', amount: 180},
-    //     {name: 'Ryan', amount: 250},
-    //     {name: 'George', amount: 320}
-    // ];
+
+    var shoppers = [
+        {name: 'Cameron', amount: 180},
+        {name: 'Ryan', amount: 250},
+        {name: 'George', amount: 320}
+    ];
+
+
+
+    for (var shoppers = 0; shoppers < 3; shoppers++) {
+        if (shoppers.amount >= 200) {
+            console.log(shoppers.amount * 0.88);
+        } else {
+            console.log(shoppers.amount);
+        }
+    }
+
+    //undefined????
+
+
 
     /** TODO:
      * Create an array of objects that represent books and store it in a
@@ -66,6 +91,49 @@
      * > console.log(books[0].author.firstName) // "Douglas"
      * > console.log(books[0].author.lastName) // "Adams"
      */
+
+    var books = [
+        {
+            title: "The Count of Monte Cristo",
+            author: {
+                firstName: "Alexandre",
+                lastName: "Dumas"
+            }
+        },
+        {
+            title: "East of Eden",
+            author: {
+                firstName: "John",
+                lastName: "Steinbeck"
+            }
+        },
+        {
+            title: "My Body in Clothes",
+            author: {
+                firstName: "Emily",
+                lastName: "Bowersox"
+            }
+        },
+        {
+            title: "The Bible",
+            author: {
+                firstName: "assorted",
+                lastName: "assorted"
+            }
+        },
+        {
+            title: "Animal Farm",
+            author: {
+                firstName: "George",
+                lastName: "Orwell"
+            }
+        }
+    ];
+
+    console.log(books[2].title);
+    console.log(books[2].author.firstName);
+    console.log(books[2].author.lastName);
+
 
     /**
      * TODO:
@@ -91,6 +159,9 @@
      *      ---
      *      ...
      */
+
+
+
 
     /**
      * Bonus:
