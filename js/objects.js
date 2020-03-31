@@ -13,8 +13,8 @@
      */
 
     var person = {
-        firstname: "Emily",
-        lastname: "Bowersox"
+        firstName: "Emily",
+        lastName: "Bowersox"
     };
 
     //another way to add- you can intialize the object with nothing in it (empty braces)
@@ -36,7 +36,7 @@
      */
 
     person.sayHello = function () {
-        return "Hello from " + person.firstname + " " + person.lastname + "!";
+        return "Hello from " + this.firstName + " " + this.lastName + "!";
     };
 
     console.log(person.sayHello());
@@ -58,24 +58,35 @@
      * and console.log the relevant messages for each person
      */
 
-
+        //an array of objects- cause brackets means an array, and brackets are objects
     var shoppers = [
         {name: 'Cameron', amount: 180},
         {name: 'Ryan', amount: 250},
         {name: 'George', amount: 320}
     ];
 
-
-
-    for (var shoppers = 0; shoppers < 3; shoppers++) {
-        if (shoppers.amount >= 200) {
-            console.log(shoppers.amount * 0.88);
+        //calling it aShopper but could be any element, x, y, etc,
+        //shoppers in the list- the fuction goes through one shopper
+    shoppers.forEach(function (aShopper) {
+        if (aShopper.amount > 200) {
+            console.log(aShopper.name + "'s total is " + aShopper.amount * 0.88);
         } else {
-            console.log(shoppers.amount);
+            console.log(aShopper.name + "'s total is " + aShopper.amount);
         }
-    }
+    });
 
-    //undefined????
+
+    //the above works!
+    //but what is below was always undefined
+    // for (var shoppers = 0; shoppers < 3; shoppers++) {
+    //     if (this.amount >= 200) {
+    //         console.log(this.amount * 0.88);
+    //     } else {
+    //         console.log(this.amount);
+    //     }
+    // }
+
+
 
 
 
@@ -160,9 +171,14 @@
      *      ...
      */
 
-    for (var books = 0; books < 5; books++) {
-        console.log("Book # " + books.index + " Title: " + books.title + " Author: " + books.author.firstName + " " + books.author.lastName);
-    }
+    // for (var books = 0; books < 5; books++) {
+    //     console.log("Book # " + books.index + " Title: " + books.title + " Author: " + books.author.firstName + " " + books.author.lastName);
+    // }
+
+
+    books.forEach(function (aBook) {
+        console.log("Book # " + " Title: " + books.title + " Author: " + books.author.firstName + " " + books.author.lastName);
+    });
 
 
     /**
