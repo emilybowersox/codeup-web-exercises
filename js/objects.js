@@ -146,6 +146,9 @@
     console.log(books[2].author.lastName);
 
 
+
+
+
     /**
      * TODO:
      * Loop through the books array and output the following information about
@@ -171,13 +174,13 @@
      *      ...
      */
 
-    // for (var books = 0; books < 5; books++) {
-    //     console.log("Book # " + books.index + " Title: " + books.title + " Author: " + books.author.firstName + " " + books.author.lastName);
-    // }
+    books.push(createBook("The Lion Witch and Wardrobe", "C.S. Lewis"));
+    books.push(createBook("Bon Appetit", "Editors"));
 
 
-    books.forEach(function (aBook) {
-        console.log("Book # " + " Title: " + books.title + " Author: " + books.author.firstName + " " + books.author.lastName);
+    //you're declaring the parameters in the function, in this case: aBook and index
+    books.forEach(function (aBook, index) {
+        console.log("Book # " + (index + 1) +  " Title: " + aBook.title + " Author: " + aBook.author.firstName + " " + aBook.author.lastName);
     });
 
 
@@ -191,5 +194,19 @@
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
+
+
+    function createBook(aTitle, authorName) {
+        var names = authorName.split(" ");
+        return {title: aTitle,
+                author: {
+                    firstName: names[0],
+                    lastName: names[1]
+                }
+        };
+    }
+
+
+    //console.log(createBook("Harry Potter", "JK Rowling"));
 
 })();
