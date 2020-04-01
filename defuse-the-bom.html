@@ -7,7 +7,7 @@
 <body>
 
 <h2 id="message">This BOM will self destruct in <span id="timer">5</span> seconds...</h2>
-<button id="defuser">Defuse the BOM</button>
+<button onclick="defuseTheBOM()" id="defuser">Defuse the BOM</button>
 
 <script>
 (function() {
@@ -34,11 +34,10 @@
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
-        if () {
             clearInterval(timerCountdown);
             alert('You saved us!');
         }
-    }
+
 
     // Don't modify anything below this line!
     //
