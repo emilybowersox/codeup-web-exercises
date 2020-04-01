@@ -31,6 +31,13 @@
         detonationTimer--;
     }, interval);
 
+    //another way is putting the setInterval down below or above instead of integrating it like i did
+    //setInterval(updateTimer, 1000);
+    //this ^ is simpler and doesn't need the extra var interval, it just sets an interval for
+    //the function they already had (updateTimer) and the parameter
+    //setInterval is setInterval(function it's setting the interval for, parameter/time of the interval)
+    //setInterval(function, parameter)
+
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
