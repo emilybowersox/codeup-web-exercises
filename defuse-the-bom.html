@@ -13,11 +13,15 @@
 (function() {
     "use strict";
 
+
+    var interval = 1000;
+
     var detonationTimer = 5;
 
+
     // TODO: This function needs to be called once every second
-    function updateTimer() {
-        if (detonationTimer == 0) {
+    var timerCountdown = setInterval(function updateTimer() {
+        if (detonationTimer === 0) {
             alert('EXTERMINATE!');
             document.body.innerHTML = '';
         } else if (detonationTimer > 0) {
@@ -25,12 +29,15 @@
         }
 
         detonationTimer--;
-    }
+    }, interval);
 
     // TODO: When this function runs, it needs to
     // cancel the interval/timeout for updateTimer()
     function defuseTheBOM() {
-
+        if () {
+            clearInterval(timerCountdown);
+            alert('You saved us!');
+        }
     }
 
     // Don't modify anything below this line!
