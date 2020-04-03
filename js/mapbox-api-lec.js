@@ -55,11 +55,11 @@ mapboxgl.accessToken = mapboxToken;
 //     .setLngLat([-96.8057, 32.7787])
 //     .addTo(map)
 //
-//
+// //
 // var markerMuseum = new mapboxgl.Marker({})
 //     .setLngLat ([-96.8084, 32.7799])
 //     .addTo(map)
-//
+
 //
 // var popupMuseum = new mapboxgl.Popup()
 //     .setHTML("<h1>Sixth Floor Museum</h1>")
