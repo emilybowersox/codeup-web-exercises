@@ -11,6 +11,7 @@ var map = new mapboxgl.Map({
 });
 
 
+
 //how do you make markers work with geocode maps? i think the problem is that the "var map" is
 //buried within the function for the geocode
 
@@ -24,7 +25,7 @@ var map = new mapboxgl.Map({
         var popupFox = new mapboxgl.Popup()
             .setHTML("<h3>Fox in the Snow</h3>")
         var markerFox = new mapboxgl.Marker()
-            .setLngLat([-82.999496, 39.984153])
+            .setLngLat(result)
             .addTo(map)
             .setPopup(popupFox);
         popupFox.addTo(map);
