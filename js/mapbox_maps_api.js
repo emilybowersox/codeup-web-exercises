@@ -14,7 +14,11 @@ var map = new mapboxgl.Map({
 //how do you make markers work with geocode maps? i think the problem is that the "var map" is
 //buried within the function for the geocode
 
-function placeMarkerAndPopup () {
+//how do you use this to make the popup clickable??
+// var el = document.createElement('div');
+// el.id = 'marker';
+
+// function placeMarkerAndPopup () {
     geocode("Fox in the Snow", mapBoxToken).then(function (result) {
         console.log('Result is ' + result);
         var popupFox = new mapboxgl.Popup()
@@ -25,9 +29,9 @@ function placeMarkerAndPopup () {
             .setPopup(popupFox);
         popupFox.addTo(map);
         });
-}
-
-placeMarkerAndPopup();
+// }
+//
+// placeMarkerAndPopup();
 
 // var markerOptions = {
 //     color: "#c8a2c8",
