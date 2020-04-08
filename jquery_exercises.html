@@ -5,23 +5,21 @@
     <title>J Query Exercise </title>
 </head>
 <body>
-
-<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script>
-    "use strict";
-
-    $(document).ready(function () {
-        alert('The DOM has finished loading');
-    });
-
-    //"$" references the JQuery object
-    //accessing "documnet" object
-    //event listener/method "ready"
-    //passing and anonymous function (function()) into the event listener "ready"..
-    //..which will execute the code when the document is ready for JS manipulation
-    //the code which is executed in the "alert"
+<div class="header-elements">
+    <h1 id="header">How has Quarantine Changed Our Style?</h1>
+    <p class="codeup">An Investigation into Current Trends</p>
+</div>
+<div class="body-elements">
+    <p>What are we seeing more of?</p>
+    <ul id="list">
+        <li>Buzzcuts</li>
+        <li>Tie-dye</li>
+        <li class="codeup">Beaded jewelry</li>
+    </ul>
+</div>
 
 
-</script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/jquery_exercises.js"></script>
 </body>
 </html>
