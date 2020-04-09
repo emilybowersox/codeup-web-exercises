@@ -35,19 +35,29 @@
 // //but .text() will grab all of it within the multiple of the element
 
 
+$(document).ready(function () {
+    console.log('i am ready to go!');
+//the functions inside this (below) are ready once the document has finished loading
+
 $('h1').click(function () {
     $('h1').css('background-color', 'green')
 });
+
+
 
 $('p').dblclick(function () {
     $('p').css('font-size', '35px')
 });
 
+
+
 $('li').hover(
     function () {
         $('li').css('color', 'red')
-},
-    function () {
+}, function () {
         $('li').css('color', 'black')
     }
 );
+
+
+});
