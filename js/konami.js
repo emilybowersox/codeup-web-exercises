@@ -7,12 +7,13 @@ console.log('hello');
 //     console.log(event.keyCode);
 // });
 
+var input = '';
+var key = '38384040373937396665';
 
-function onKonamiCode(cb) {
-    console.log('on code')
-    var input = '';
-    var key = '38384040373937396665';
-    document.addEventListener('keydown', function (e) {
+function konamiCode(cb) {
+    console.log('on code');
+    // document.addEventListener('keydown', function (e) {
+    $(document).keyup(function(e){
         input += ("" + e.keyCode);
         if (input === key) {
             return cb();
@@ -21,8 +22,15 @@ function onKonamiCode(cb) {
         input = ("" + e.keyCode);
     });
 }
+// ^'e' stands for event, but really could but anything in here
+// -standing for function 'event'
 
-onKonamiCode(function () {alert('You did it!')})
+konamiCode(function () {
+    console.log('Happy Easter');
+    alert('You have added 700 lives');
+    $('h1').css('color', 'blue', 'background-color', 'red');
+    $('h1').css('background-color', 'red');
+});
 
 
 //https://stackoverflow.com/questions/31626852/how-to-add-konami-code-in-a-website-based-on-html
