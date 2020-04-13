@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J Query FAQ</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+        #picture-box {
+            display: flex;
+
+        }
+
+        img {
+            width: 200px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>National Parks Information!</h1>
+    <dl>
+        <dt>Where are parks located?</dt>
+            <dd>All across the United States.</dd>
+        <dt>What is a park in California?</dt>
+            <dd>King's Canyon Park.</dd>
+        <dt>Are their Sequioa trees there?</dt>
+            <dd>Yes, there are.</dd>
+        <dt>What are special about Sequioa trees?</dt>
+            <dd>They are the largest trees in the world.</dd>
+        <dt>Are there Redwoods there?</dt>
+            <dd>No, redwoods grow along the coast.</dd>
+        <dt>Where are parks located?</dt>
+            <dd>All across the United States.</dd>
+        <dt>What is a park in California?</dt>
+            <dd>King's Canyon Park.</dd>
+        <dt>Are their Sequioa trees there?</dt>
+            <dd>Yes, there are.</dd>
+        <dt>What are special about Sequioa trees?</dt>
+            <dd>They are the largest trees in the world.</dd>
+        <dt>Are there Redwoods there?</dt>
+            <dd>No, redwoods grow along the coast.</dd>
+    </dl>
+    <button>Invisible</button>
+    <button>Highlight</button>
+    <ul>
+        <h3>Palo Duro Canyon</h3>
+        <li>It is in Texas</li>
+        <li>It is a canyon</li>
+        <li>It is six hours from Dallas</li>
+        <li>I would like to go there</li>
+    </ul>
+    <ul>
+        <h3>Palo Duro Canyon</h3>
+        <li>It is in Texas</li>
+        <li>It is a canyon</li>
+        <li>It is six hours from Dallas</li>
+        <li>I would like to go there</li>
+    </ul>
+    <ul>
+        <h3>Palo Duro Canyon</h3>
+        <li>It is in Texas</li>
+        <li>It is a canyon</li>
+        <li>It is six hours from Dallas</li>
+        <li>I would like to go there</li>
+    </ul>
+    <a href="#">Yellow there!</a>
+    <br>
+    <br>
+    <div id="picture-box">
+    <div class="left"><img id="image1" src="https://images.pexels.com/photos/3041347/pexels-photo-3041347.jpeg?cs=srgb&dl=empty-gray-road-under-white-clouds-3041347.jpg&fm=jpg" alt="road and mountains"></div>
+    <div class="center"><img id="image2" src="https://images.pexels.com/photos/2902960/pexels-photo-2902960.jpeg?cs=srgb&dl=person-covered-with-white-cloth-2902960.jpg&fm=jpg" alt="child under towel"></div>
+    <div class="right"><img id="image3" src="https://images.pexels.com/photos/4108126/pexels-photo-4108126.jpeg?cs=srgb&dl=text-4108126.jpg&fm=jpg" alt="'I wash my hands'"></div>
+
+    </div>
+    <div id="button-box">
+        <button id="button1">Swap 1</button>
+        <button id="button2">Swap 2</button>
+        <button id="button3">Swap 3</button>
+    </div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+    $(document).ready(function () {
+
+    $('dd').addClass('invisible');
+    // $('.invisible').css('visibility', 'hidden');
+
+    $('button:first-of-type').addClass('invisibleButton');
+
+    $('button:nth-of-type(2)').addClass('highlightButton');
+
+        $('.invisibleButton').click(function () {
+            $('dd').toggleClass('invisible');
+        });
+
+    $('.highlightButton').click(function () {
+        $('dt').css('background', 'green');
+    });
+
+    //////traversing exercise below
+
+    $('a').addClass('yellow');
+
+    $('.yellow').click(function () {
+        $('li:last-child').css('background', 'yellow');
+    });
+
+    $('h3').click(function () {
+        $('li').css('font-weight', 'bold');
+    });
+
+    $('li').click(function () {
+        $('li:first-of-type').css('color', 'blue');
+    });
+
+
+
+
+    //work for bonus
+        //guessing we have to put in d-flex right and light
+        //within the classes of the divs around the images
+    $('img').css('width', '200px');
+
+
+
+    $('#button1').click(function () {
+        $('#image1').toggleclass('.left');
+    });
+
+
+
+
+
+
+    });
+
+</script>
+</body>
+</html>
