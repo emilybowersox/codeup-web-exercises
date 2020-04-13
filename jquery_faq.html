@@ -34,9 +34,30 @@
         <dt>Are there Redwoods there?</dt>
             <dd>No, redwoods grow along the coast.</dd>
     </dl>
-
     <button>Invisible</button>
     <button>Highlight</button>
+    <ul>
+        <h3>Palo Duro Canyon</h3>
+        <li>It is in Texas</li>
+        <li>It is a canyon</li>
+        <li>It is six hours from Dallas</li>
+        <li>I would like to go there</li>
+    </ul>
+    <ul>
+        <h3>Palo Duro Canyon</h3>
+        <li>It is in Texas</li>
+        <li>It is a canyon</li>
+        <li>It is six hours from Dallas</li>
+        <li>I would like to go there</li>
+    </ul>
+    <ul>
+        <h3>Palo Duro Canyon</h3>
+        <li>It is in Texas</li>
+        <li>It is a canyon</li>
+        <li>It is six hours from Dallas</li>
+        <li>I would like to go there</li>
+    </ul>
+    <a href="#">Yellow there!</a>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
@@ -45,9 +66,6 @@
 
     $('dd').addClass('invisible');
     // $('.invisible').css('visibility', 'hidden');
-
-
-
 
     $('button:first-of-type').addClass('invisibleButton');
 
@@ -58,11 +76,21 @@
         });
 
     $('.highlightButton').click(function () {
-        $('dt').css('background', 'yellow');
+        $('dt').css('background', 'green');
     });
 
+    //////traversing exercise below
+
+    $('a').addClass('yellow');
+
+    $('.yellow').click(function () {
+        $('li:last-child').css('background', 'yellow');
     });
 
+
+
+
+    });
 
 </script>
 </body>
