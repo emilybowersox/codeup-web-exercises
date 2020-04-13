@@ -8,6 +8,15 @@
             visibility: hidden;
         }
 
+        #picture-box {
+            display: flex;
+
+        }
+
+        img {
+            width: 200px;
+        }
+
     </style>
 </head>
 <body>
@@ -58,6 +67,19 @@
         <li>I would like to go there</li>
     </ul>
     <a href="#">Yellow there!</a>
+    <br>
+    <br>
+    <div id="picture-box">
+    <div class="left"><img id="image1" src="https://images.pexels.com/photos/3041347/pexels-photo-3041347.jpeg?cs=srgb&dl=empty-gray-road-under-white-clouds-3041347.jpg&fm=jpg" alt="road and mountains"></div>
+    <div class="center"><img id="image2" src="https://images.pexels.com/photos/2902960/pexels-photo-2902960.jpeg?cs=srgb&dl=person-covered-with-white-cloth-2902960.jpg&fm=jpg" alt="child under towel"></div>
+    <div class="right"><img id="image3" src="https://images.pexels.com/photos/4108126/pexels-photo-4108126.jpeg?cs=srgb&dl=text-4108126.jpg&fm=jpg" alt="'I wash my hands'"></div>
+
+    </div>
+    <div id="button-box">
+        <button id="button1">Swap 1</button>
+        <button id="button2">Swap 2</button>
+        <button id="button3">Swap 3</button>
+    </div>
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
@@ -95,6 +117,19 @@
         $('li:first-of-type').css('color', 'blue');
     });
 
+
+
+
+    //work for bonus
+        //guessing we have to put in d-flex right and light
+        //within the classes of the divs around the images
+    $('img').css('width', '200px');
+
+
+
+    $('#button1').click(function () {
+        $('#image1').toggleclass('.left');
+    });
 
 
 
