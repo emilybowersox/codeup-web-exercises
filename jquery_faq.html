@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>J Query FAQ</title>
+    <style>
+        .invisible {
+            visibility: hidden;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>National Parks Information!</h1>
+    <dl>
+        <dt>Where are parks located?</dt>
+            <dd>All across the United States.</dd>
+        <dt>What is a park in California?</dt>
+            <dd>King's Canyon Park.</dd>
+        <dt>Are their Sequioa trees there?</dt>
+            <dd>Yes, there are.</dd>
+        <dt>What are special about Sequioa trees?</dt>
+            <dd>They are the largest trees in the world.</dd>
+        <dt>Are there Redwoods there?</dt>
+            <dd>No, redwoods grow along the coast.</dd>
+        <dt>Where are parks located?</dt>
+            <dd>All across the United States.</dd>
+        <dt>What is a park in California?</dt>
+            <dd>King's Canyon Park.</dd>
+        <dt>Are their Sequioa trees there?</dt>
+            <dd>Yes, there are.</dd>
+        <dt>What are special about Sequioa trees?</dt>
+            <dd>They are the largest trees in the world.</dd>
+        <dt>Are there Redwoods there?</dt>
+            <dd>No, redwoods grow along the coast.</dd>
+    </dl>
+
+    <button>Invisible</button>
+    <button>Highlight</button>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+    $(document).ready(function () {
+
+    $('dd').addClass('invisible');
+    // $('.invisible').css('visibility', 'hidden');
+
+
+
+
+    $('button:first-of-type').addClass('invisibleButton');
+
+    $('button:nth-of-type(2)').addClass('highlightButton');
+
+        $('.invisibleButton').click(function () {
+            $('dd').toggleClass('invisible');
+        });
+
+    $('.highlightButton').click(function () {
+        $('dt').css('background', 'yellow');
+    });
+
+    });
+
+
+</script>
+</body>
+</html>
