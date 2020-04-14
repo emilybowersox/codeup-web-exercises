@@ -28,6 +28,10 @@
     </style>
 </head>
 <body>
+    <div>
+        <h1 id="newsletter">"Would you like to sign up for our newsletter?"</h1>
+        <span>X</span>
+    </div>
     <h1>National Parks Information!</h1>
     <dl>
         <dt>Where are parks located?</dt>
@@ -124,6 +128,24 @@
     $('li').click(function () {
         $('li:first-of-type').css('color', 'blue');
     });
+
+
+    //////////effects exercise below
+
+        $('span').addClass('x');
+
+        $('.x').click(function () {
+            $('#newsletter').hide();
+        });
+
+        $('h3').click(function () {
+            $('li').slideToggle();
+        });
+
+
+
+
+
 
 
 
