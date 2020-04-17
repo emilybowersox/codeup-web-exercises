@@ -8,6 +8,9 @@
           integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!--    my style sheet goes on the bottom to override-->
     <link rel="stylesheet" href="css/weather_map.css">
+<!--    mapbox links-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css' rel='stylesheet' />
 </head>
 <body>
 
@@ -30,8 +33,19 @@
 
 <div id="cards-div" class="d-flex justify-content">
     <div class="card" style="width: 18rem;">
+        <div class="card-header" id="date"></div>
+        <ul class="list-group list-group-flush">
+            <li id="temp" class="list-group-item"></li>
+            <li id="description" class="list-group-item"></li>
+            <li id="humidity" class="list-group-item"></li>
+            <li id="wind" class="list-group-item"></li>
+            <li id="pressure" class="list-group-item"></li>
+        </ul>
+    </div>
+    <div class="card" style="width: 18rem;">
         <div class="card-header"></div>
         <ul class="list-group list-group-flush">
+            <li class="list-group-item"></li>
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
@@ -45,14 +59,6 @@
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
-        </ul>
-    </div>
-    <div class="card" style="width: 18rem;">
-        <div class="card-header"></div>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
-            <li class="list-group-item"></li>
             <li class="list-group-item"></li>
         </ul>
     </div>
@@ -63,11 +69,13 @@
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
         </ul>
     </div>
     <div class="card" style="width: 18rem;">
         <div class="card-header"></div>
         <ul class="list-group list-group-flush">
+            <li class="list-group-item"></li>
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
             <li class="list-group-item"></li>
@@ -76,24 +84,17 @@
     </div>
 </div>
 
-    <table>
-        <thead>
-        <tr>
-            <th>City</th>
-            <th>Current Temperature</th>
-            <th>High of the Day</th>
-            <th>City ID</th>
-        </tr>
-        </thead>
-        <tbody id="insertWeather"></tbody>
-    </table>
+
+<!--Map Box-->
+    <div id='map' style='width: 750px; height: 500px;'class="mt-4"></div>
+<!--    -->
 
 </div>
 
 
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script src="js/keys.js"></script>
+<script src="js/keys2.js"></script>
 <script src="js/weather_map.js"></script>
 
 </body>
