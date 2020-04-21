@@ -5,6 +5,55 @@ $(document).ready(function () {
 weatherMapToken;
 //name of my API key
 
+    var url = "/http://api.openweathermap.org/data/2.5/weather";
+    //do we need slashes before or after?
+
+
+
+    $.get("http://api.openweathermap.org/data/2.5/weather", {
+        APPID: weatherMapToken,
+        q:     "Dallas, US",
+        units: "imperial"
+    }).done(function (data) {
+        console.log('current weather', data);
+        $('#insertWeather').empty();
+        renderHTML();
+    }).fail(function (error){
+        console.error(error);
+    });
+
+    // getInfo();
+
+    function renderHTML(weatherArray){
+        var HTML = "";
+        // $("#insertProducts").empty(); // clean up your structure
+
+        weatherArray.forEach(function(tool){
+            HTML = "<ul>" +
+                "            <li>"+data.main.temp+"</li>" +
+                "            <li>"+data.weather.description+"</li>" +
+                "            <li>"+data.main.humidity+"</li>" +
+                "            <li>"+data.main.pressure+"</li>" +
+                "        </ul>";
+            $("#insertWeather").append(HTML);
+        });
+
+    }
+
+   //  function getInfo(){
+   //      $.get(url, {
+   //                  APPID: weatherMapToken,
+   //                  q:     "Dallas, US",
+   //                  units: "imperial"
+   //              }).done(function (data){
+   //          renderHTML(data);
+   //      }).fail(function (error){
+   //          console.error(error);
+   //      });
+   //  }
+   //
+   // getInfo();
+
 
 
     // function renderHTML(weatherArray){
@@ -37,14 +86,12 @@ weatherMapToken;
     //
 
 
-    //
-    // $.get("http://api.openweathermap.org/data/2.5/weather", {
-    //     APPID: weatherMapToken,
-    //     q:     "Dallas, US",
-    //     units: "imperial"
-    // }).done(function (data) {
-    //     console.log('current weather', data);
-    // });
+
+
+
+
+
+
 
 
 
