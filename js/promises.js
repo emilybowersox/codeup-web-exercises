@@ -14,17 +14,21 @@ let gitHubToken = "456e6e275fe7db0bd4899fe710e9dc01adc8cf43";
 // //if there's a :username it means you need to put in a specific username
 //
 // GET /users/emilybowersox/events
-//
 // function (gitHubUserName) {
-//
 //     return dateOfLastCommit
 // }
 
-fetch('https://api.github.com/users/emilybowersox/events',{headers: {'Authorization' : gitHubToken}})
-    .then(response => console.log(response))
-    .catch(error => console.error(error));
+function getLastCommit(username){
+    let url = `https://api.github.com/users/${username}/events/public`;
+    console.log(url);
+   return fetch(url,{headers: {'Authorization' : gitHubToken}})
+        .then(response => response.json()
+            .then(data => console.log(data[0].created_at))
+        )
+        .catch(error => console.error(error));
+}
 
-
+getLastCommit('emilybowersox');
 
 
 
