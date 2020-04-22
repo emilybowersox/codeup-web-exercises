@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather Map Project!</title>
+    <!--    this is bootstrap version 4.2.1-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+          integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!--    my style sheet goes on the bottom to override-->
+    <link rel="stylesheet" href="css/weather_map.css">
+<!--    mapbox links-->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.9.0/mapbox-gl.css' rel='stylesheet' />
+</head>
+<body>
+
+<div>
+
+    <nav class="navbar navbar-light bg-primary">
+        <span class="navbar-brand mb-0 h1 text-white">Weather App</span>
+        <span class="navbar-brand mb-0 text-white">Current City: </span>
+    </nav>
+
+    <!--Search Bar-->
+    <nav class="navbar-light p-4 d-flex">
+        <a class="navbar-brand">Place</a>
+        <form class="form-inline">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-primary my-2 my-sm-0" type="submit">Find</button>
+        </form>
+    </nav>
+    <!---->
+
+<!--    practice table-->
+    <div id="insertWeather"></div>
+
+
+
+
+<div id="cards-div" class="d-flex justify-content">
+    <div class="card" style="width: 18rem;">
+        <div class="card-header" id="date"></div>
+        <ul class="list-group list-group-flush">
+            <li id="temp" class="list-group-item"></li>
+            <li id="description" class="list-group-item"></li>
+            <li id="humidity" class="list-group-item"></li>
+            <li id="wind" class="list-group-item"></li>
+            <li id="pressure" class="list-group-item"></li>
+        </ul>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-header"></div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+        </ul>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-header"></div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+        </ul>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-header"></div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+        </ul>
+    </div>
+    <div class="card" style="width: 18rem;">
+        <div class="card-header"></div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+            <li class="list-group-item"></li>
+        </ul>
+    </div>
+</div>
+
+
+<!--Map Box-->
+    <div id='map' style='width: 750px; height: 500px;'class="mt-4"></div>
+<!--    -->
+
+</div>
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="js/keys2.js"></script>
+<script src="js/weather_map.js"></script>
+
+</body>
+</html>
