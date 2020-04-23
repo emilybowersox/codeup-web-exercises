@@ -165,3 +165,5 @@ console.log(allLanguages);
 
 
 
+//there's another example of map/filter/reduce with promises in the
+//map-filter-reduce-lec.js codeup file
