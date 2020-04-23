@@ -38,7 +38,7 @@ const users = [
     }
 ];
 
-
+//FILTER
 //Use .filter to create an array of user objects where each user
 // object has at least 3 languages in the languages array.
 
@@ -66,3 +66,17 @@ console.log(filterLanguages);
 var anotherFilterLanguages = [];
 anotherFilterLanguages = users.filter(user => user.languages.length >= 3);
 console.log(anotherFilterLanguages);
+
+//MAP
+//Use .map to create an array of strings where each element is a user's email address
+var emailAddress = [];
+emailAddress = users.map(function (user) {
+    return user.email;
+});
+console.log(emailAddress);
+
+//es6 syntax
+var moreEmailAddresses = [];
+moreEmailAddresses = users.map(user => user.email);
+console.log(moreEmailAddresses);
+
