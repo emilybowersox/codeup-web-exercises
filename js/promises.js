@@ -1,4 +1,8 @@
 
+//basically you can do with Promises what you were doing with jquery, except you don't
+//have to connect/add anything
+
+
 
 let gitHubToken = "456e6e275fe7db0bd4899fe710e9dc01adc8cf43";
 // fetch(url, {headers: {'Authorization': gitHubToken}});
@@ -28,7 +32,9 @@ function getLastCommit(username){
         .catch(error => console.error(error));
 }
 
-getLastCommit('emilybowersox');
+
+getLastCommit('emilybowersox')
+    .then( lastCommitDate => console.log('last commit date: ', lastCommitDate));
 
 
 
