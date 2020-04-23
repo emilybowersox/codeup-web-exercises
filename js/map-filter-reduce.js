@@ -80,3 +80,28 @@ var moreEmailAddresses = [];
 moreEmailAddresses = users.map(user => user.email);
 console.log(moreEmailAddresses);
 
+//REDUCE
+//Use .reduce to get the total years of experience from the list of users.
+// Once you get the total of years you can use the result to calculate the average.
+
+var moreTotalYearsExperience = 0;
+moreTotalYearsExperience = users.reduce(function (total, aUser) {
+    return total + aUser.yearsOfExperience;
+}, 0);
+console.log(moreTotalYearsExperience);
+
+//es6
+var totalYearsExperience = 0;
+//use 0 to initialize a number, '' for strings, {} for objects, [] for arrays.
+totalYearsExperience = users.reduce((total, aUser) => {
+    return total + aUser.yearsOfExperience;
+}, 0);
+console.log(totalYearsExperience);
+//do you have to use 'return' for .reduce?
+
+
+
+
+
+
+
